@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
   public function index()
   {
-    $cursos = Filial::all();
+    $filiais = Filial::all();
     return view('home',compact('filiais'));
   }
 }

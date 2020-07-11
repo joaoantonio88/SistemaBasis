@@ -25,7 +25,6 @@ class CreateAutomovelsTable extends Migration
               onDelete('cascade');
 
           $table->string('nome', 100);
-          $table->string('cpf', 15)->unique();
           $table->string('ano', 4);
           $table->string('modelo', 30);
           $table->string('cor', 30);

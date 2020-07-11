@@ -24,14 +24,14 @@ class CreateFuncionariosTable extends Migration
               onDelete('cascade');
 
           $table->string('nome', 100);
-          $table->Date('datanascimento');
+          $table->Date('datanascimento')->unsigned(NULL);
           $table->string('sexo', 20);
           $table->string('cpf', 15)->unique();
           $table->string('endereco', 100);
           $table->string('cargo', 40);
-          $table->decimal('salario',5,2)->default(0.00);
+          $table->decimal('salario',16,2)->default(0.00);
           $table->enum('situacao',['ativo','inativo'])->default('ativo');
-          $table->string('senha', 10);
+          $table->string('senha', 255);
           $table->timestamps();
       });
     }

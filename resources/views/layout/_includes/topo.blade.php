@@ -22,10 +22,10 @@
          <li><a href="/">Home</a></li>
 
          @if(Auth::guest())
-           <li><a href="{{route('admin.funcionarios')}}">Funcionarios</a></li>
            <li><a href="{{route('site.login')}}">Login</a></li>
          @else
            <li><a href="{{route('admin.filiais')}}">Filiais</a></li>
+           <li><a href="{{route('admin.funcionarios')}}">Funcionário</a></li>
            <li><a href="{{route('admin.automoveis')}}">Automóveis</a></li>
            <li><a href="#">{{Auth::user()->name}}</a></li>
            <li><a href="{{ route('site.login.sair') }}">Sair</a></li>
@@ -36,10 +36,10 @@
          <li><a href="/">Home</a></li>
 
          @if(Auth::guest())
-          <li><a href="{{route('admin.funcionarios')}}">Funcionarios</a></li>
           <li><a href="{{route('site.login')}}">Login</a></li>
          @else
            <li><a href="{{route('admin.filiais')}}">Filiais</a></li>
+           <li><a href="{{route('admin.funcionarios')}}">Funcionário</a></li>
            <li><a href="{{route('admin.automoveis')}}">Automóveis</a></li>
 
 

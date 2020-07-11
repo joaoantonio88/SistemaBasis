@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('titulo','Usuarios')
+@section('titulo','Funcionarios')
 
 @section('conteudo')
   <div class="container">
@@ -10,13 +10,13 @@
         {{ csrf_field() }}
 
         <div class="input-field">
-          <label>Email</label>
-          <input type="text" name="email">
+          <input type="text" name="cpf">
+          <label>cpf</label>
         </div>
 
         <div class="input-field">
-          <label>Senha</label>
           <input type="password" name="password">
+          <label>Senha</label>
         </div>
 
 

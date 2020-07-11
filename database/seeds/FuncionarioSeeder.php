@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
+use App\Funcionario;
 
-
-class UsuarioSeeder extends Seeder
+class FuncionarioSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,19 +13,21 @@ class UsuarioSeeder extends Seeder
     public function run()
     {
       $dados = [
-        'name'=>"Administrador",
-        'email'=>'cruz.jasc@gmail',
+        'nome'=>"Administrador",
+        'filial_id'=>"1",
         'cpf'=>"32783175722",
-        'password'=>bcrypt("123456"),
+        'senha'=>bcrypt("123456"),
       ];
 
-      if(User::where('cpf','=',$dados['cpf'])->count()){
-        $usuario = User::where('cpf','=',$dados['cpf'])->first();
+      if(Funcionario::where('cpf','=',$dados['cpf'])->count()){
+        $usuario = Funcionario::where('cpf','=',$dados['cpf'])->first();
         $usuario->update($dados);
         echo "Usuario Alterado!";
       }else{
-        User::create($dados);
+        Funcionario::create($dados);
         echo "Usuario Criado!";
       }
+
+
     }
 }

@@ -17,7 +17,7 @@ class Funcionario extends Model
         'cargo',
         'salario',
         'situacao',
-        'senha'
+        'senha',
     ];
 
     public $timestamps = false;

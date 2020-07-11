@@ -11,7 +11,7 @@ class Filial extends Model
         'nome',
         'endereco',
         'ie',
-        'cnpj'
+        'cnpj',
     ];
 
     public $timestamps = false;

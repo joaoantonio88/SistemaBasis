@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Funcionario;
+use App\User;
 use App\Http\Requests\FuncionarioFormRequest;
 use DB;
 
@@ -49,6 +50,8 @@ class FuncionarioController extends Controller
     }
 
     Funcionario::create($dados);
+
+
 
     return redirect()->route('admin.funcionarios');
   }
